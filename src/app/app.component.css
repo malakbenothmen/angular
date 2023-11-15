@@ -1,0 +1,141 @@
+/* Stylisation du composant principal */
+body {
+  margin:0;
+  font-family: 'Arial', sans-serif;
+  background-color:#fadfad ;
+  height:650px;
+}
+
+  .header-container {
+    background-image: url('C:\Users\malek\Documents\angular\bg5.jpeg');
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.885);
+    padding: 20px;
+    text-align: center;
+    height:120px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.title {
+  margin: 0; 
+  font-family: "Agbalumo";
+  text-align:center;
+  font-size: 40px;
+  color: #a28231;
+}
+
+.titre {
+  margin:0 ; 
+  font-family: "Cookie";
+  text-align:center;
+
+  color:#de6e0c;
+  font-size: 30px;
+}
+.titreliste{
+  font-family: "Libre Caslon Text";
+  text-align:center;
+  color:#fa8072 ;
+}
+footer {
+  background-color: #a28231;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin:0;
+  height:90px;
+}
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+div {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles pour les boutons */
+  button {
+    margin-right: 10px;
+  }
+  .btn-custom-add {
+    background-color: #ff5733; 
+    color: #ffffff; 
+  }
+  .btn-custom-affiche {
+    background-color: #e6be1d; 
+    color: #ffffff; 
+  }
+
+  .btn-custom-Delete {
+    background-color: #fa8072; 
+    color: #ffffff; 
+  }
+  .btn-custom-filtre {
+    background-color: #808000; 
+    color: #ffffff; 
+  }
+ 
+  /* Style pour la liste de notes */
+  ul {
+    list-style-type: "*";
+    padding: 50;
+  }
+  
+  li {
+    margin: 5px 0;
+  }
+
+  li button {
+    margin-left: 10px;
+  }
+  
+  /* Style pour les icons d'edition et supprission */
+  .edit-icon {
+    color: #a67b5b;
+    background-color: transparent; 
+    margin:7px;
+  }
+  .edit-icon:hover{
+    border: 2px solid #faf0e6; 
+  }
+  .delete-icon {
+    color: #195905;
+    background-color: transparent; 
+  }
+  .delete-icon:hover{
+    border: 2px solid #faf0e6; 
+  }
+
+
+  .note-item i {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  
+  .note-item:hover i {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .custom-table {
+    border: 2px solid #a67b5b; 
+    border-radius: 8px; 
+    background-color: transparent; 
+
+  }
+  .custom-table tr:hover {
+    border: 2px solid #faf0e6; 
+  }
+  

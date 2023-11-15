@@ -1,0 +1,62 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cookie&family=Kaushan+Script&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cookie&family=Kaushan+Script&family=Libre+Caslon+Text:wght@700&display=swap');
+  </style>
+<body>
+<header class="header-container">
+  <div class="header-content">
+    <h1 class="title">{{ titre }}</h1>
+  </div>
+</header>
+
+
+<div class="container">
+    <div class="form-group">
+        <h2 class="titre"  >{{ title }}</h2>
+        <input type="text" [(ngModel)]="note" placeholder="Saisir un texte"  class="form-control">
+    </div>
+
+  <button (click)="AddNote()" class="btn btn-custom-add" ><i class="fa fa-add"></i> Add Note</button>
+  <button (click)="afficher()" class="btn btn-custom-affiche"><i [ngClass]="{'fas fa-eye': !c , 'fa fa-eye-slash': c}" class="icon"></i>{{c ?  ' Cacher' : ' Afficher' }}</button>
+  
+ 
+  <button type="button" class="btn btn-custom-Delete" (click)="showConfirmDialog()"><i class="fa fa-trash"></i> Delete All</button>
+  
+<div>
+ <h4 class="titreliste">{{c ?  'La Liste de Mes Notes' : '' }}</h4>
+  <table class="table custom-table">
+      <tr *ngFor="let note of notes; let i = index" [style.color]="colors[i]" class="note-item">
+        <td td align="center">{{ note }}</td>
+        <td>
+          <i class="fas fa-edit fa-lg edit-icon "  (click)="showConfirmModif(i)"></i>
+          <i class="fas fa-trash fa-lg delete-icon" (click)="deleteNote(i)" ></i>
+        </td>
+      </tr>
+  </table>
+  <h2 class="titre">{{ filtrage }}</h2>
+  <table  align="center">
+    <tr><td>
+      <div class="form-group">
+      <input type="text" [(ngModel)]="searchString" placeholder="Saisir un mot a filtrer"  class="form-control input-sm">
+  </div></td>
+<td><button (click)="cacherfiltre()" class="btn btn-custom-filtre" ><i [ngClass]="{'fas fa-filter filter-icon': !cf , 'fa fa-eye-slash': cf}" class="icon"></i>{{ cf ?  ' Cacher' : ' Filtrer' }}</button></td></tr>
+  </table>
+</div>
+
+
+  <ul>
+    <li *ngFor="let searchnote of filteredNotes; let i = index" [style.color]="colors[i]" >
+      {{ searchnote }}
+    </li>
+  </ul>
+</div>
+</body>
+  
+
+<footer>
+  <div class="footer-content">
+      <p>Contactez-Moi : <i class="fas fa-envelope"></i> malekbenothmen70@gmail.com</p>
+      <p>&copy; 2023 Mon premier Site Web en utilisant angular. </p>
+  </div>
+</footer>
